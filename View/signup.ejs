@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Your CSS file link -->
+</head>
+<body>
+  <h1>Create an Account</h1>
+
+  <!-- Form for Sign Up -->
+  <form action="/user" method="POST">
+    <div>
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="first_name" required placeholder="Enter your first name">
+    </div>
+    
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+    </div>
+
+    <div>
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd" required placeholder="Enter your password">
+    </div>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p>Already have an account? <a href="/login">Login here</a></p>
+
+</body>
+</html>

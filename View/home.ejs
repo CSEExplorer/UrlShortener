@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <% if (locals.id) { %>
+    <p>URL Generated : http://localhost:8000/api/url/<%= id %></p>
+
+    <% } %>
+
+    <h1>URL Shortener</h1>
+    <form action="/api/url" method="POST">
+      <label for="redirectUrl">Enter URL to Shorten:</label>
+      <input
+        type="url"
+        name="redirectUrl"
+        id="redirectUrl"
+        placeholder="https://example.com"
+        required
+      />
+      <button type="submit">Shorten URL</button>
+    </form>
+
+    <br>
+    <button onclick="window.location.href='/analytics'">View URL Analytics</button>
+    
+  </body>
+</html>

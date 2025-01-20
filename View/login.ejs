@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Your CSS file link -->
+</head>
+<body>
+  <h1>Login to Your Account</h1>
+
+  <!-- Form for Login -->
+  <form action="/user/login" method="POST">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+    </div>
+
+    <div>
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd" required placeholder="Enter your password">
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+
+</body>
+</html>

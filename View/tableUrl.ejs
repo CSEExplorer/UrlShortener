@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener - URL List</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>URL Shortener - URLs and Visit Counts</h1>
+
+  <!-- Table to display the URLs and their visit counts -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Short URL</th>
+        <th>Original URL</th>
+        <th>Visit Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Urls.forEach(url => { %>
+        <tr>
+          <td><a href="http://localhost:8000/api/url/<%= url.shortUrl %>">http://localhost:8000/api/url/<%= url.shortUrl %></a></td>
+          <td><%= url.redirectUrl %></td>
+          <td><%= url.visitHistory.length %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+</body>
+</html>
